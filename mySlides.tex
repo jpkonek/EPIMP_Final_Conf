@@ -326,8 +326,8 @@ So Total Trust rules out high confidence in Moore-like sentences.
   \textbf{GSP}:
   \begin{itemize}
   \item The single value $\E_{\pi}(X)$ determines the desirability of \textit{all gambles} in form $(X - t)$.
-  \item Structural assumption: desirable gambles are a half-space through the origin.
   \item These desirability judgements determine the inaccuracy of the single estimate $\E_{\pi}(X)$.
+  \item Structural assumption: desirable gambles are a half-space through the origin.
   \end{itemize}
   \textbf{INSERT NAME HERE}
   \begin{itemize}
@@ -386,11 +386,11 @@ So Total Trust rules out high confidence in Moore-like sentences.
   \item Then there is some open set $\Oset$ of gambles where Total Trust fails.
   \item Define:
     \begin{flalign*}
-      & \Oset^+ = \Oset \cap D_{\pi} \,\,\,\, \Oset^- = \Oset \cap D^c_{\pi}\\
-      & D_p^* = D_p \cup \Oset^+ \sim \Oset^-
+      & \Oset^+ = \Oset \cap D_{\pi}, \,\,\,\,\,\, \Oset^- = \Oset \cap D^c_{\pi}\\
+      & D_p^{\pi \restriction \Oset} = D_p \cup \Oset^+ \sim \Oset^-
     \end{flalign*}
   \item You \alert{actually} find the gambles in $\Oset^+$ desirable, and those in $\Oset^+$ not desirable.
-  \item $D_p^*$ represents the opinions you would have if, \alert{at every possible world}, you made the same
+  \item $D_p^{\pi \restriction \Oset}$ represents the opinions you would have if, \alert{at every possible world}, you made the same
     desirability judgements over $\Oset$ as you actually do. 
   \end{itemize}
 \end{frame}
@@ -403,18 +403,32 @@ So Total Trust rules out high confidence in Moore-like sentences.
 
 \begin{frame}{New accuracy characterisation of Total Trust}
   \begin{itemize}
-  \item \textbf{Note}: At some possible worlds, $D_p^*$ denotes an \alert{incoherent} set of desirable gambles. I.e.
+  \item \textbf{Note}: At some possible worlds, $D_p^{\pi \restriction \Oset}$ denotes an \alert{incoherent} set of desirable gambles. I.e.
     not a half-space passing through the origin.
   \item But with INSERT NAME HERE we can measure its inaccuracy at all possible worlds!
   \end{itemize}
   \begin{block}{Theorem}
     \begin{enumerate}
-      \item If $\pi$ does not Totally Trust $p$, then there is some set of gambles $\Oset^*$ such that
-        $\pi$ expects $D_p^*$ to be at least as accurate as $D_p$ under \textit{every} INSERT NAME HERE measure
-        of inaccuracy.
+      \item If $\pi$ does not Totally Trust $p$, then there is some set of gambles $\Oset$ such that
+        $\pi$ expects $D_p^{\pi \restriction \Oset}$ to be at least as accurate as $D_p$ under \textit{every}
+        INSERT NAME HERE measure of inaccuracy.
       \item If $\pi$ Totally Trusts $p$, then there is no such set of gambles.
     \end{enumerate}
   \end{block}
+\end{frame}
+
+\begin{frame}{The New Argument}
+  \begin{itemize}
+  \item Let $p$ be a definite description of your credence function, and $\pi$ your actual credence function (rigidly designated).
+  \item Suppose $\pi$ does not Totally Trust $p$.
+  \item Then there is some (rigidly designated!) set of gambles $\Oset$ such that you think you would be more accurate,
+    under \textbf{\alert{every}} INSERT NAME HERE measure of inaccuracy, if you made the same desirability judgements
+    as $\pi$ over $\Oset$ at every possible world.
+  \item So there is some set of gambles where you expect some rigidly designated credence function (e.g. $\pi=(1/3, 1/3, 1/3)$)
+    to be more accurate than your own credence function $p$.
+  \item Alternatively: you expect that, if you \textit{determinately} made the same judgements as $\pi$ over $\Oset$, you
+    would become more accurate than you are.
+  \end{itemize}
 \end{frame}
 
 \end{document}
