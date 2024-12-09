@@ -1,0 +1,2 @@
+\beamer@sectionintoc {1}{Seld-Doubt and Self-Trust}{2}{0}{1}
+\beamer@sectionintoc {2}{Accuracy Argument for Total Trust}{11}{0}{2}

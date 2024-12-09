@@ -1,0 +1,308 @@
+\documentclass[aspectratio=169, dvipsnames]{beamer}
+\usetheme{metropolis}           % Use metropolis theme
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\K}{\mathcal{K}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\M}{\mathcal{M}}
+\newcommand{\Pclass}{\mathcal{P}}
+\newcommand{\Ptop}{\overline{P}}
+\newcommand{\Phat}{\hat{P}}
+\newcommand{\Pbottom}{\underline{P}}
+\newcommand{\Qtop}{\overline{Q}}
+\newcommand{\Qbottom}{\underline{Q}}
+\newcommand{\Rtop}{\overline{R}}
+\newcommand{\Rbottom}{\underline{R}}
+\newcommand{\Ibottom}{\underline{I}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Y}{\mathcal{Y}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\B}{\mathcal{B}}
+\newcommand{\G}{\mathcal{G}}
+\newcommand{\W}{\mathcal{W}}
+\newcommand{\V}{\mathcal{V}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\Sent}{\mathcal{S}}
+\newcommand{\Lang}{\mathcal{L}}
+\newcommand{\Ebb}{\mathbb{E}}
+\newcommand{\I}{\mathcal{I}}
+
+%\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz} % graphs for probability spaces
+\usetikzlibrary{shapes.geometric,calc,through, positioning}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{tkz-euclide}
+%\tikzstyle{decnode} = [rectangle, minimum width=0.25cm, minimum height=0.25cm, draw=black]
+%\tikzstyle{natnode} = [circle, minimum width=0.25cm, minimum height=0.25cm, draw=black]
+%\tikzstyle{arrow} = [thick,->,>=stealth]
+
+%%%%%%%%%%%%%%%% Default block with metropolis colors
+\setbeamercolor{block title}{bg=mDarkTeal, fg=black!2}
+\setbeamercolor{block body}{bg=mDarkTeal!10}
+%%%%%%%%%%%%%%%%
+
+
+\title{An Accuracy Argument for Self-Trust}
+%\date{\today}
+\author{Giacomo Molinari\\giacomo.molinari@bristol.ac.uk}
+\institute{University of Bristol}
+\begin{document}
+\maketitle
+
+
+\section{Seld-Doubt and Self-Trust}
+
+\begin{frame}{Self-Doubt}
+  Two kinds of self-doubt
+  \begin{enumerate}
+  \item \textbf{Alethic self-doubt}: doubting that my beliefs are \alert{accurate}.
+  \item \textbf{Normative}: doubting that my beliefs are \alert{rational}.
+  \end{enumerate}
+  I will focus on alethic self-doubt here.
+\end{frame}
+
+\begin{frame}{Rational Self-Doubt}
+  It seems rational to doubt the accuracy of my own beliefs.
+  \begin{itemize}
+  \item \textbf{Plenty of evidence} that I have been wrong, and that my peers are wrong.
+  \item \textbf{Preface-like cases}: I'm confident that some of my beliefs about biology are \textit{false} (e.g. ``Mammals don't lay eggs'').
+  \item \textbf{Cartesian Circle}: No non-circular way to rule out the possibility that our beliefs are thoroughly inaccurate.
+  \end{itemize}
+  \begin{columns}
+    \begin{column}{.48\linewidth}
+      \begin{center}
+        \includegraphics[width=.7\textwidth]{platypus.jpg}
+      \end{center}
+    \end{column}
+    \begin{column}{.48\linewidth}
+      \begin{center}
+      \includegraphics[width=0.7\textwidth]{descartes.png}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Irrational Self-Doubt}
+  \begin{columns}
+    \begin{column}{.48\linewidth}
+      Some cases of extreme self-doubt seem irrational.
+      \vspace{20pt}
+      
+      E.g. believing a \alert{Moorean sentence}:\\
+      ``It's raining, but it's not the case that I believe that it's raining''.\\
+      $\text{Bel}(A \land \lnot \text{Bel}(A))$
+    \end{column}
+    \begin{column}{.48\linewidth}
+      \begin{center}
+      \includegraphics[width=0.7\textwidth]{GEMoore.jpg}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Questions}
+  \begin{itemize}
+  \item \textbf{\alert{Why}} are certain kinds of self-doubt irrational? Equivalently: why is some amount of self-trust rationally
+    required?
+  \item \alert{\textbf{How much}} may we rationally doubt ourselves? Equivalently: what is the minimum amount of self-trust that is
+    rationally required?
+  \item What about \textbf{\alert{graded doxastic states}}? E.g. being \textit{very confident} in
+    ``It's raining, and I'm \textit{very confident} that it's not raining'' seems nearly as bad as
+    believing a Moorean sentence.
+  \end{itemize}
+  \textbf{Goal}: Use \textbf{\alert{accuracy}} to answer these questions.
+\end{frame}
+
+\begin{frame}{Notation}
+  \begin{itemize}
+    \item $\W =\{w_1, ..., w_n\}$ finite set of \textit{possible worlds}.
+    \item Greek letters $\pi, \gamma$ denote \textit{rigidly designated credence functions}, i.e. vectors in $\R^n$.
+    \item Latin letters $p, q$ denote \textit{definite descriptions of credence functions}.
+      \begin{itemize}
+      \item $p$ is a function from possible worlds to credence functions. So $p(w_i)$ is a credence function for every $w_i \in \W$.
+      \item Can think of them as vector-valued random variables.
+      \item Abuse notation: $p_i$ instead of $p(w_i)$.
+      \end{itemize}
+    \item If $\phi$ is a property of credence functions, $[\phi(p)]$ is the proposition $\{w_i: \phi(p_i)\}$
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+  \begin{itemize}
+  \item $p = \text{ My radiologist's credence function}$.
+  \item $B = \text{ I have a broken bone}$.  
+  \end{itemize}
+  \begin{figure}
+    \centering
+    \begin{tikzpicture}[scale=.9]
+      % Points
+      \coordinate (w1) at (0,2.3);
+      \coordinate (w2) at (2.3,2.3);
+      \coordinate (w3) at (0, 0);
+      \coordinate (w4) at (2.3,0);
+      
+      % Nodes
+      \foreach \point/\label/\pos in {w1/{w_1}/above, w2/{w_2}/above, w3/{w_3}/above, w4/{w_4}/above} {
+        \filldraw (\point) circle (1pt) node[\pos] {$\label$};
+      }
+
+      % Rectangle around w_1 and w_2
+      \draw[dashed, rounded corners] ($(w1) + (-1.2,1)$) rectangle ($(w2) + (3.5,-1)$);
+      % rectangle around w_3 and w_4
+      \draw[dashed, rounded corners] ($(w3) + (-1.2,1)$) rectangle ($(w4) + (3.5,-1)$);
+      % Rectangle around w_1 and w_3
+      \draw[rounded corners] ($(w1) + (-1,1.2)$) rectangle ($(w3) + (1,-1.95)$);
+      % rectangle around w_2 and w_4
+      \draw[rounded corners] ($(w2) + (-1,1.2)$) rectangle ($(w4) + (1,-1.95)$);
+
+      % Label for the rectangle
+      \node[right] at ($(w2) + (1,0)$) {$[p(B) = .98]$};
+      \node[right] at ($(w4) + (1,0)$) {$[p(B) = .02]$};
+      % Label for the rectangles horizontal
+      \node[below] at ($(w3) + (0,-1)$) {$B$};
+      \node[below] at ($(w4) + (0,-1)$) {$\lnot B$};
+    \end{tikzpicture}
+  \end{figure}
+  \begin{equation*}
+    p_1 = p_2 = (.97, .01, .01, .01) \,\,\, p_3 = p_4 = (.01, .01, .01, .97) 
+  \end{equation*}
+\end{frame}
+
+\begin{frame}{A self-trust requirement}
+  \begin{itemize}
+  \item Let $p$ be a definite description of your credence function.
+  \item Let $\pi$ be your actual credence function (i.e. $\pi=p_i$ where $w_i$ is the actual world)
+  \end{itemize}
+  \begin{block}{Total Trust}
+    You Totally Trust yourself iff:
+    \begin{equation}
+      \label{totTrust}
+      \E_{\pi}(X | [\E_p(X) \geq r]) \geq r
+    \end{equation}
+    whenever $X: \W \to \R$, $r \in \R$, and the above conditional expectation is defined.
+  \end{block}
+  I want to argue that rational agents Totally Trust themselves.
+\end{frame}
+
+\begin{frame}{Consequences of Total Trust}
+Together with coherence, Total Trust entails that you cannot be maximally confident in $A$ as well as maximally confident in
+$[p(A) \leq \text{low}]$, because then we would have:
+\begin{flalign}
+  &\pi(A \land [p(A) \leq \text{low}]) = 1\\
+  &\iff \frac{\pi(A \land [p(A) \leq \text{low}])}{\pi([p(A) \leq \text{low}])} = 1\\
+  &\iff \pi(A|[p(R) \leq \text{low}]) = 1 > \text{low}
+\end{flalign}
+which violates Total Trust.
+
+Similarly, Total Trust entails that you cannot be very highly confident of both $A$ and $[p(A) \leq \text{low}]$.
+
+So Total Trust rules out high confidence in Moore-like sentences.
+\end{frame}
+
+\section{Accuracy Argument for Total Trust}
+
+\begin{frame}{Generalised Strictly Proper Scores}
+  How inaccurate is expectation $\E_{\pi}(X)$ when $X$ has value $X(w_i) = x_i$?
+  \begin{itemize}
+  \item Interpret $\E_{\pi}(X)$ as a \textit{unique fair price} for gamble $X$.
+  \item $(X - t)$ is desirable whenever $t < \E_{\pi}(X)$
+  \item ``Add up'' the losses resulting from these desirability judgements when $w_1$ is the case.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Example}
+  \begin{columns}
+    \begin{column}{.4\linewidth}
+      \begin{itemize}
+      \item $\W = \{w_1, w_2\}$.
+      \item $X = (-3, 6)$.
+      \item $\pi = (1/2, 1/2)$, so $\E_{\pi}(X)=1.5$.
+      \item Say $w_1$ is the case, so $X = -3$
+      \end{itemize}
+    \end{column}
+    \begin{column}{.58\linewidth}
+      \begin{center}
+      \includegraphics[width=0.95\textwidth]{GSP1.pdf}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Example}
+  \begin{columns}
+    \begin{column}{.4\linewidth}
+      \begin{equation*}
+        S(\pi(X), x_i) = \int_{x_i}^{\pi(X)}-(x_i - t)\lambda(dt)
+      \end{equation*}
+      Different $\lambda$ yield different GSP measures of inaccuracy.
+    \end{column}
+    \begin{column}{.58\linewidth}
+      \begin{center}
+      \includegraphics[width=1.05\textwidth]{GSP2.pdf}
+      \end{center}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{An Accuracy Argument for Total Trust}
+  Let $p$ be a definite description of my credence function, and $\pi$ my actual credence function.
+  \begin{block}{Theorem (Dorst et al. 2012, Th.3.2)}
+    $\pi$ Totally Trusts $p$ iff for \textit{every} GSP measure of inaccuracy, $\pi$ expects $p$ to be at least as accurate
+    as $\pi$. 
+  \end{block}
+  \begin{itemize}
+  \item Suppose I don't Totally Trust myself, i.e. $\pi$ does not Totally Trust $p$.
+  \item Then there is a rigidly designated credence function $\pi$ (e.g. (1/3, 1/3, 1/3)) that I think is more accurate
+    than $p$ under GSP measure $S$.
+  \item I expect that I would be more accurate, as measured by $S$, by having credence function $\pi$ at all possible worlds!
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Problem}
+  \begin{itemize}
+  \item The above theorem shows that, if I don't Totally Trust myself, then I expect some rigidly designated credence function
+    to be more accurate than myself under \alert{\textbf{some}} GSP measure of accuracy.
+  \item But why should we care about \textit{that} measure?
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  Maybe more abt why this is a problem...
+\end{frame}
+
+\begin{frame}{From credences to desirability judgements}
+  The desirability judgements induced by a coherent credence function $\pi$ via its expectation $\E_{\pi}$, interpreted as unique
+  fair price, are \textbf{extremely structured}.
+  \begin{center}
+      \includegraphics[width=.7\textwidth]{desirability1.pdf}
+  \end{center}
+\end{frame}
+
+\begin{frame}{From credences to desirability judgements}
+  We gain considerable expressive power by representing your attitudes via \alert{\textbf{sets of desirable gambles}}.
+
+  \textbf{Note}: We are interested in showing that \textit{rational} agents Totally Trust themselves.
+  \begin{itemize}
+    \item Rational agents have coherent and (for this talk) precise doxastic states.
+    \item So we just need to show that agents with \textit{coherent, precise} doxastic states should trust themselves. 
+    \item Your beliefs are still representable by a coherent credence function $\pi$.
+    \item The added expressive power lets us consider ways your beliefs \textbf{\alert{could be}}
+      that don't correspond to any coherent credence function.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{From GSP to INSERT NAME HERE measures of inaccuracy}
+  We can use [INSERT NAME HERE] to measure the inaccuracy of an arbitrary set of desirable gambles at a
+  world.
+  \begin{itemize}
+  \item For every $X$ which you find desirable, you get a penalty if $X$ is not actually desirable.
+  \item For every $X$ which you don't find desirable, you get a penalty if $X$ is actually desirable.
+  \end{itemize}
+  \begin{equation}
+      \label{KonekScoreDefAppendix}
+      S(\pi, w_i) = \int_{D_{w_i} \sim D_{\pi}} x_i d\mu - \int_{D_{\pi} \sim D_{w_i}} x_i d\mu 
+    \end{equation}
+\end{frame}
+
+\end{document}
