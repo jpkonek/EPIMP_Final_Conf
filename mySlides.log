@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.8.29)  9 DEC 2024 14:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2023.8.29)  11 DEC 2024 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1022,12 +1022,12 @@ LaTeX Font Info:    Trying to load font information for TS1+cmss on input line
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
-<platypus.jpg, id=41, 2569.6pt x 1739.49875pt>
+<platypus.jpg, id=45, 2569.6pt x 1739.49875pt>
 File: platypus.jpg Graphic file (type jpg)
 <use platypus.jpg>
 Package pdftex.def Info: platypus.jpg  used on input line 85.
 (pdftex.def)             Requested size: 133.83998pt x 90.58981pt.
-<descartes.png, id=42, 803.0pt x 616.3025pt>
+<descartes.png, id=46, 803.0pt x 616.3025pt>
 File: descartes.png Graphic file (type png)
 <use descartes.png>
 Package pdftex.def Info: descartes.png  used on input line 85.
@@ -1039,11 +1039,11 @@ Overfull \vbox (20.48958pt too high) detected at line 85
 [4
 
  <./platypus.jpg> <./descartes.png>]
-<GEMoore.jpg, id=52, 258.9675pt x 340.27126pt>
+<GEMoore.jpg, id=56, 258.9675pt x 340.27126pt>
 File: GEMoore.jpg Graphic file (type jpg)
 <use GEMoore.jpg>
 Package pdftex.def Info: GEMoore.jpg  used on input line 103.
-(pdftex.def)             Requested size: 133.83998pt x 175.8673pt.
+(pdftex.def)             Requested size: 105.95895pt x 139.22655pt.
  [5
 
  <./GEMoore.jpg>] [6
@@ -1065,7 +1065,7 @@ Overfull \vbox (18.39261pt too high) detected at line 171
 ] [12
 
 ]
-<GSP1.pdf, id=103, 361.35pt x 363.3575pt>
+<GSP1.pdf, id=108, 361.35pt x 363.3575pt>
 File: GSP1.pdf Graphic file (type pdf)
 <use GSP1.pdf>
 Package pdftex.def Info: GSP1.pdf  used on input line 231.
@@ -1087,7 +1087,7 @@ m/n/10.95 ^^@ \OT1/mathkerncmss/m/sl/10.95 t\OT1/cmss/m/n/10.95 )\OML/cmm/m/it/
 5 )
  []
 
-<GSP2.pdf, id=124, 361.35pt x 302.12875pt>
+<GSP2.pdf, id=129, 361.35pt x 302.12875pt>
 File: GSP2.pdf Graphic file (type pdf)
 <use GSP2.pdf>
 Package pdftex.def Info: GSP2.pdf  used on input line 247.
@@ -1109,74 +1109,78 @@ Overfull \vbox (28.32172pt too high) detected at line 247
 
 ] [17
 
+] [18
+
 ]
-<desirability1.pdf, id=160, 361.35pt x 228.855pt>
+<desirability1.pdf, id=172, 361.35pt x 228.855pt>
 File: desirability1.pdf Graphic file (type pdf)
 <use desirability1.pdf>
-Package pdftex.def Info: desirability1.pdf  used on input line 281.
+Package pdftex.def Info: desirability1.pdf  used on input line 282.
 (pdftex.def)             Requested size: 278.83578pt x 176.59602pt.
 
-Overfull \vbox (28.80595pt too high) detected at line 281
+Overfull \vbox (28.80595pt too high) detected at line 282
  []
 
-[18
+[19
 
- <./desirability1.pdf>] [19
+ <./desirability1.pdf>] [20
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{totTrust}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.310 \end{frame}
-                  [20
-
-] [21
+l.311 \end{frame}
+                  [21
 
 ] [22
 
 ] [23
 
+] [24
+
 ]
-<TTFailure1.pdf, id=223, 361.35pt x 357.335pt>
+<TTFailure1.pdf, id=234, 361.35pt x 357.335pt>
 File: TTFailure1.pdf Graphic file (type pdf)
 <use TTFailure1.pdf>
-Package pdftex.def Info: TTFailure1.pdf  used on input line 363.
+Package pdftex.def Info: TTFailure1.pdf  used on input line 364.
 (pdftex.def)             Requested size: 219.88469pt x 217.43968pt.
 
-Overfull \vbox (27.29059pt too high) detected at line 363
- []
-
-[24
-
- <./TTFailure1.pdf>]
-<TTFailure2.pdf, id=249, 361.35pt x 357.335pt>
-File: TTFailure2.pdf Graphic file (type pdf)
-<use TTFailure2.pdf>
-Package pdftex.def Info: TTFailure2.pdf  used on input line 381.
-(pdftex.def)             Requested size: 219.88469pt x 217.43968pt.
-
-Overfull \vbox (27.29059pt too high) detected at line 381
+Overfull \vbox (27.29059pt too high) detected at line 364
  []
 
 [25
 
- <./TTFailure2.pdf>] [26
+ <./TTFailure1.pdf>]
+<TTFailure2.pdf, id=261, 361.35pt x 357.335pt>
+File: TTFailure2.pdf Graphic file (type pdf)
+<use TTFailure2.pdf>
+Package pdftex.def Info: TTFailure2.pdf  used on input line 382.
+(pdftex.def)             Requested size: 219.88469pt x 217.43968pt.
 
-]
-<TTFailure3.pdf, id=282, 361.35pt x 357.335pt>
-File: TTFailure3.pdf Graphic file (type pdf)
-<use TTFailure3.pdf>
-Package pdftex.def Info: TTFailure3.pdf  used on input line 402.
-(pdftex.def)             Requested size: 219.08743pt x 216.65453pt.
-
-Overfull \vbox (29.98044pt too high) detected at line 402
+Overfull \vbox (27.29059pt too high) detected at line 382
  []
 
-[27
+[26
 
- <./TTFailure3.pdf>] [28
+ <./TTFailure2.pdf>] [27
 
-] [29
+]
+<TTFailure3.pdf, id=292, 361.35pt x 357.335pt>
+File: TTFailure3.pdf Graphic file (type pdf)
+<use TTFailure3.pdf>
+Package pdftex.def Info: TTFailure3.pdf  used on input line 403.
+(pdftex.def)             Requested size: 219.08743pt x 216.65453pt.
+
+Overfull \vbox (29.98044pt too high) detected at line 403
+ []
+
+[28
+
+ <./TTFailure3.pdf>] [29
+
+] [30
+
+] [31
 
 ]
 \tf@nav=\write6
@@ -1188,23 +1192,23 @@ Overfull \vbox (29.98044pt too high) detected at line 402
 \tf@snm=\write8
 \openout8 = `mySlides.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 434.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 434.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
  (./mySlides.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 434.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 434.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 438.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
 Package rerunfilecheck Info: File `mySlides.out' has not changed.
-(rerunfilecheck)             Checksum: A2B025FF7315FB9B1A9382062F5BE881;128.
+(rerunfilecheck)             Checksum: F9004D3AA0E8116A9EA268FB9436CBC0;188.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 22305 strings out of 483107
- 448701 string characters out of 5964630
- 691263 words of memory out of 5000000
- 36722 multiletter control sequences out of 15000+600000
+ 22318 strings out of 483107
+ 448817 string characters out of 5964630
+ 691395 words of memory out of 5000000
+ 36730 multiletter control sequences out of 15000+600000
  545113 words of font info for 69 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  71i,13n,95p,1884b,744s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1221,12 +1225,11 @@ s/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmssi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/s
-ymbols/msbm10.pfb>
-Output written on mySlides.pdf (29 pages, 1785091 bytes).
+symbols/msbm10.pfb>
+Output written on mySlides.pdf (31 pages, 1777885 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 287 compressed objects within 3 object streams
- 63 named destinations out of 1000 (max. 500000)
- 104 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 300 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 112 words of extra memory for PDF output out of 10000 (max. 10000000)
 
