@@ -86,17 +86,16 @@
 
 \begin{frame}{Irrational Self-Doubt}
   \begin{columns}
-    \begin{column}{.6\linewidth}
+    \begin{column}{.69\linewidth}
       Some cases of extreme self-doubt seem irrational.
       \vspace{20pt}
       
       E.g. believing a \alert{Moorean sentence}:\\
-      ``It's raining, but it's not the case that I believe that it's raining''.\\
-      $\text{Bel}(A \land \lnot \text{Bel}(A))$
+      ``It's raining, but it's not the case that I believe it's raining''.\\
     \end{column}
-    \begin{column}{.38\linewidth}
+    \begin{column}{.3\linewidth}
       \begin{center}
-      \includegraphics[width=0.7\textwidth]{GEMoore.jpg}
+      \includegraphics[width=0.95\textwidth]{GEMoore.jpg}
       \end{center}
     \end{column}
   \end{columns}
@@ -104,13 +103,13 @@
 
 \begin{frame}{Questions}
   \begin{itemize}
-  \item \textbf{\alert{Why}} are certain kinds of self-doubt irrational? Why is some amount of self-trust rationally
-    required?
-  \item \alert{\textbf{How much}} may we rationally doubt ourselves? What is the minimum amount of self-trust that is
-    rationally required?
-  \item What about \textbf{\alert{graded doxastic states}}? E.g. being \textit{very confident} in
-    ``It's raining, and I'm \textit{very confident} that it's not raining'' seems nearly as bad as
-    believing a Moorean sentence.
+  \item \textbf{\alert{Why}} are certain kinds of self-doubt irrational? 
+  \item \alert{\textbf{How much}} may we rationally doubt ourselves? 
+  \item What about \textbf{\alert{graded doxastic states}}?
+    \begin{itemize}
+    \item Being \textit{very confident} in ``It's raining, and I'm \textit{very confident} that it's not raining''
+      seems nearly as bad as believing a Moorean sentence.
+    \end{itemize}
   \end{itemize}
   \textbf{Goal}: Use \textbf{\alert{accuracy}} to answer these questions.
 \end{frame}
@@ -183,23 +182,22 @@
     \end{equation}
     whenever $X: \W \to \R$, $r \in \R$, and the above conditional expectation is defined.
   \end{block}
-  I want to argue that rational agents Totally Trust themselves.
+
+  Coherence + Total Trust entails that you cannot be very highly confident of both $A$ and $[p(A) \leq \text{low}]$.
 \end{frame}
 
-\begin{frame}{Consequences of Total Trust}
-Coherence + Total Trust $\implies$ you cannot be maximally confident in $A$ as well as in
-$[p(A) \leq \text{low}]$. Because:
-\begin{flalign}
-  &\pi(A \land [p(A) \leq \text{low}]) = 1\\
-  &\iff \frac{\pi(A \land [p(A) \leq \text{low}])}{\pi([p(A) \leq \text{low}])} = 1\\
-  &\iff \pi(A|[p(R) \leq \text{low}]) = 1 > \text{low}
-\end{flalign}
-which violates Total Trust.
+%\begin{frame}{Consequences of Total Trust}
+%Coherence + Total Trust $\implies$ you cannot be maximally confident in $A$ as well as in
+%$[p(A) \leq \text{low}]$. Because:
+%\begin{flalign}
+%  &\pi(A \land [p(A) \leq \text{low}]) = 1\\
+%  &\iff \frac{\pi(A \land [p(A) \leq \text{low}])}{\pi([p(A) \leq \text{low}])} = 1\\
+%  &\iff \pi(A|[p(R) \leq \text{low}]) = 1 > \text{low}
+%\end{flalign}
+%which violates Total Trust.
 
-More generally: Coherence + Total Trust $\implies$ you cannot be very highly confident of both $A$ and $[p(A) \leq \text{low}]$.
-
-Total Trust rules out high confidence in Moore-like sentences.
-\end{frame}
+  %More generally:
+%\end{frame}
 
 \section{An Accuracy Argument for Total Trust}
 
@@ -208,43 +206,44 @@ Total Trust rules out high confidence in Moore-like sentences.
   \begin{itemize}
   \item Interpret $\E_{\pi}(X)$ as a \textit{unique fair price} for gamble $X$.
   \item $(X - t)$ is desirable whenever $t < \E_{\pi}(X)$
-  \item ``Add up'' the losses resulting from these desirability judgements when $w_1$ is the case.
+  \item $(t - X)$ is desirable whenever $t > \E_{\pi}(X)$
+  \item Inaccuracy of $\E_{\pi}(X)$ obtained by ``adding up'' the losses resulting from these desirability judgements. 
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Example}
-  \begin{columns}
-    \begin{column}{.4\linewidth}
-      \begin{itemize}
-      \item $\W = \{w_1, w_2\}$.
-      \item $X = (-3, 6)$.
-      \item $\pi = (1/2, 1/2)$, so $\E_{\pi}(X)=1.5$.
-      \item Say $w_1$ is the case, so $X = -3$
-      \end{itemize}
-    \end{column}
-    \begin{column}{.58\linewidth}
-      \begin{center}
-        \includegraphics[width=0.95\textwidth]{GSP1.pdf}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
+%\begin{frame}{Example}
+%  \begin{columns}
+%    \begin{column}{.4\linewidth}
+%      \begin{itemize}
+%      \item $\W = \{w_1, w_2\}$.
+%      \item $X = (-3, 6)$.
+%      \item $\pi = (1/2, 1/2)$, so $\E_{\pi}(X)=1.5$.
+%      \item Say $w_1$ is the case, so $X = -3$
+%      \end{itemize}
+%    \end{column}
+%    \begin{column}{.58\linewidth}
+%      \begin{center}
+%        \includegraphics[width=0.95\textwidth]{GSP1.pdf}
+%      \end{center}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
 
-\begin{frame}{Example}
-  \begin{columns}
-    \begin{column}{.4\linewidth}
-      \begin{equation*}
-        S(\E_{\pi}(X), x_i) = \int_{x_i}^{\E_{\pi}(X)}-(x_i - t)\lambda(dt)
-      \end{equation*}
-      Different $\lambda$ yield different GSP measures of inaccuracy.
-    \end{column}
-    \begin{column}{.58\linewidth}
-      \begin{center}
-      \includegraphics[width=1.05\textwidth]{GSP2.pdf}
-      \end{center}
-    \end{column}
-  \end{columns}
-\end{frame}
+%\begin{frame}{Example}
+%  \begin{columns}
+%%    \begin{column}{.4\linewidth}
+%      \begin{equation*}
+%        S(\E_{\pi}(X), x_i) = \int_{x_i}^{\E_{\pi}(X)}-(x_i - t)\lambda(dt)
+%      \end{equation*}
+%      Different $\lambda$ yield different GSP measures of inaccuracy.
+%    \end{column}
+%    \begin{column}{.58\linewidth}
+%      \begin{center}
+%      \includegraphics[width=1.05\textwidth]{GSP2.pdf}
+%      \end{center}
+%    \end{column}
+%  \end{columns}
+%\end{frame}
 
 \begin{frame}{An Accuracy Argument for Total Trust}
   \begin{block}{Theorem (Dorst et al. 2012, Th.3.2)}
@@ -254,14 +253,13 @@ Total Trust rules out high confidence in Moore-like sentences.
   \begin{itemize}
   \item Suppose I don't Totally Trust myself, i.e. $\pi$ does not Totally Trust $p$.
   \item Then there is a rigidly designated credence function $\pi$ (e.g. (1/3, 1/3, 1/3)) that I think is more accurate
-    than $p$ under some GSP measure $S$.
+    than me under some GSP measure $S$.
   \item I expect that I would be more accurate, as measured by $S$, by having credence function $\pi$ at all possible worlds!
   \end{itemize}
+
+  \textbf{Problem}: Why should we care about \alert{\textbf{that}} measure?
 \end{frame}
 
-\begin{frame}{Problem}
-  Why should we care about \alert{\textbf{that}} measure?
-\end{frame}
 
 \section{Improving the Argument}
 
@@ -287,11 +285,10 @@ Total Trust rules out high confidence in Moore-like sentences.
 \end{frame}
 
 \begin{frame}{From credences to desirability judgements}
+  For any probability function $\pi$, $D_{\pi} = \{X : p(X) > 0\}$ is the set of gambles an agent with credence function
+  $\pi$ finds desirable.
+  
   We can express Total Trust in desirability terms.
-  \begin{itemize}
-  \item Let $p$ be a definite description of your credence function. $D_p = \{X : p(X) > 0\}$ is a definite description of a set of gambles.
-  \item Let $\pi$ be your actual credence function, rigidly designated. So $D_{\pi} = \{X: \pi(X) > 0\}$ is a rigidly designated set of gambles.
-  \end{itemize}
   \begin{block}{Total Trust}
     $\pi$ Totally Trusts $p$ iff:
     \begin{equation}
@@ -318,14 +315,14 @@ Total Trust rules out high confidence in Moore-like sentences.
 \begin{frame}{GSP vs INSERT NAME HERE}
   \textbf{GSP}:
   \begin{itemize}
-  \item The single value $\E_{\pi}(X)$ determines the desirability of \textit{all gambles} in form $(X - t)$.
+  \item \alert{\textbf{Structural Assumption}}: The single value $\E_{\pi}(X)$ determines the desirability of
+    \textit{all gambles} in form $(X - t)$ and $(t-X)$.
   \item These judgements jointly determine the inaccuracy of the expectation value $\E_{\pi}(X)$.
-  \item \alert{\textbf{Structural assumption}}: desirable gambles are a half-space through the origin.
   \end{itemize}
   \textbf{INSERT NAME HERE}
   \begin{itemize}
-  \item Each desirability judgement \textit{contributes individually} to your total score.
   \item \alert{\textbf{No structural assumptions}} on desirability judgements.
+  \item Each desirability judgement contributes \textit{directly and individually} to your total inaccuracy.
   \end{itemize}
 \end{frame}
 
@@ -342,8 +339,8 @@ Total Trust rules out high confidence in Moore-like sentences.
       \begin{itemize}
       \item $\W = \{w_1,w_2\}$
       \item $w_2$ is the actual world.
-      \item $p_1 = (.2, .8)$
-      \item $p_2 = \pi = (.8, .2)$
+      %\item $p_1 = (.2, .8)$
+      %\item $p_2 = \pi = (.8, .2)$
       \item $X = (-4, 4)$
       \end{itemize}
     \end{column}
@@ -360,9 +357,9 @@ Total Trust rules out high confidence in Moore-like sentences.
     \begin{column}{.38\linewidth}
       \begin{itemize}
       \item $[X \in D_p] = \{w_1\}$.
-      \item $\pi(X| \{w_1\}) = -4$.
-      \item So $X \notin D_{\pi(\cdot| \{w_1\})}$.
-      \item Similarly for $X + Z$, where $-\epsilon < Z < \epsilon$
+      \item But $X(w_1) = -4$.
+      \item So $X \notin D_{\pi(\cdot| [X \in D_p])}$, violating Total Trust.
+      \item Similarly for nearby gambles.
       \end{itemize}
     \end{column}
     \begin{column}{.6\linewidth}
@@ -413,22 +410,18 @@ Total Trust rules out high confidence in Moore-like sentences.
 \begin{frame}{The New Argument}
   \begin{itemize}
   \item Suppose $\pi$ does not Totally Trust $p$.
-  \item Then there is some (rigidly designated!) set of gambles $\Oset$ such that you think you would be more accurate,
-    under \textbf{\alert{every}} INSERT NAME HERE measure of inaccuracy, if you made the same desirability judgements
-    as $\pi$ over $\Oset$ at every possible world.
-  \item So there is some set of gambles where you expect some rigidly designated credence function (e.g. $\pi=(1/3, 1/3, 1/3)$)
-    to be more accurate than your own credence function $p$.
-  \item Alternatively: you expect that, if you \textit{determinately} made the same judgements as $\pi$ over $\Oset$, you
-    would become more accurate than you are.
+  \item Then there are (rigidly designated!) set of gambles $\Oset^+, \Oset^-$ such that you think you would be more accurate,
+    under \textbf{\alert{every}} INSERT NAME HERE measure of inaccuracy, if you found gambles in $\Oset^+$ desirable and
+    gambles in $\Oset^-$ not desirable at every possible world.
+  \item There is a rigidly designated way to change your judgements which you expect would make you more accurate.
   \end{itemize}
 \end{frame}
 
 \begin{frame}{Many open questions...}
   \begin{itemize}
-  \item Is it really bad to expect some possibly incoherent definite description to be more accurate than you, when you are \textit{certain} to be coherent?
-    I.e. is there any epistemic value to normative certainty?
-  \item How do we determine which doxastic states we should compare your own with when evaluating you?
-  \item What can we say about self-trust for imprecise doxastic states?
+  \item Is it really bad to expect some \textit{possibly incoherent} definite description to be more accurate than you? 
+  \item How do we determine which doxastic states we should compare yours against when evaluating you?
+  \item Self-trust requirements for imprecise probabilities?
   \end{itemize}
   
 \end{frame}
