@@ -52,16 +52,16 @@
 \maketitle
 
 
-\section{Seld-Doubt and Self-Trust}
+\section{Self-Doubt and Self-Trust}
 
-\begin{frame}{Self-Doubt}
-  Two kinds of self-doubt
-  \begin{enumerate}
-  \item \textbf{Alethic self-doubt}: doubting that my beliefs are \alert{accurate}.
-  \item \textbf{Normative}: doubting that my beliefs are \alert{rational}.
-  \end{enumerate}
-  I will focus on alethic self-doubt here.
-\end{frame}
+%\begin{frame}{Self-Doubt}
+%  Two kinds of self-doubt
+%  \begin{enumerate}
+%  \item \textbf{Alethic self-doubt}: doubting that my beliefs are \alert{accurate}.
+%  \item \textbf{Normative}: doubting that my beliefs are \alert{rational}.
+%  \end{enumerate}
+%  I will focus on alethic self-doubt here.
+%\end{frame}
 
 \begin{frame}{Rational Self-Doubt}
   It seems rational to doubt the accuracy of my own beliefs.
@@ -90,8 +90,8 @@
       Some cases of extreme self-doubt seem irrational.
       \vspace{20pt}
       
-      E.g. believing a \alert{Moorean sentence}:\\
-      ``It's raining, but it's not the case that I believe it's raining''.\\
+      E.g. believing a (commissive) \alert{Moorean sentence}:\\
+      ``It's raining, but I believe it's not raining''.\\
     \end{column}
     \begin{column}{.3\linewidth}
       \begin{center}
@@ -175,7 +175,7 @@
   \item Let $\pi$ be your actual credence function (i.e. $\pi=p_i$ where $w_i$ is the actual world)
   \end{itemize}
   \begin{block}{Total Trust}
-    You Totally Trust yourself iff:
+    $\pi$ Totally Trusts $p$ iff:
     \begin{equation}
       \label{totTrust}
       \E_{\pi}(X | [\E_p(X) \geq r]) \geq r
@@ -201,14 +201,16 @@
 
 \section{An Accuracy Argument for Total Trust}
 
-\begin{frame}{Generalised Strictly Proper Scores}
-  How inaccurate is expectation $\E_{\pi}(X)$ when $X$ has value $X(w_i) = x_i$?
-  \begin{itemize}
-  \item Interpret $\E_{\pi}(X)$ as a \textit{unique fair price} for gamble $X$.
-  \item $(X - t)$ is desirable whenever $t < \E_{\pi}(X)$
-  \item $(t - X)$ is desirable whenever $t > \E_{\pi}(X)$
-  \item Inaccuracy of $\E_{\pi}(X)$ obtained by ``adding up'' the losses resulting from these desirability judgements. 
-  \end{itemize}
+\begin{frame}{Measuring Accuracy}
+
+  \alert{Generalised Strictly Proper} (GSP) measures of accuracy can be used to measure the accuracy of
+  a probability function $\pi$.
+% \begin{itemize}
+%  \item Interpret $\E_{\pi}(X)$ as a \textit{unique fair price} for gamble $X$.
+%  \item $(X - t)$ is desirable whenever $t < \E_{\pi}(X)$
+%  \item $(t - X)$ is desirable whenever $t > \E_{\pi}(X)$
+%  \item \alert{GSP} measures of accuracy: the inaccuracy of estimate $\E_{\pi}(X)$ is obtained by ``adding up'' the losses resulting from these desirability judgements. 
+%  \end{itemize}
 \end{frame}
 
 %\begin{frame}{Example}
@@ -246,9 +248,9 @@
 %\end{frame}
 
 \begin{frame}{An Accuracy Argument for Total Trust}
-  \begin{block}{Theorem (Dorst et al. 2012, Th.3.2)}
-    $\pi$ Totally Trusts $p$ iff for \textit{every} GSP measure of inaccuracy, $\pi$ expects $p$ to be at least as accurate
-    as $\pi$. 
+  \begin{block}{Theorem (Dorst et al. 2021, Th.3.2)}
+    $\pi$ Totally Trusts $p$ iff for \textit{every} GSP measure of inaccuracy,
+    $\pi$ expects $p$ to be at least as accurate as $\pi$. 
   \end{block}
   \begin{itemize}
   \item Suppose I don't Totally Trust myself, i.e. $\pi$ does not Totally Trust $p$.
@@ -257,20 +259,20 @@
   \item I expect that I would be more accurate, as measured by $S$, by having credence function $\pi$ at all possible worlds!
   \end{itemize}
 
-  \textbf{Problem}: Why care about \alert{\textbf{that}} measure? Under \textit{most reasonable measures}, I may
+  \textbf{Problem}: Why care about \alert{\textbf{that}} measure? Under \textit{most reasonable (GSP) measures}, I may
   expect $p$ to be more accurate than $\pi$.
 \end{frame}
 
 
 \section{Improving the Argument}
 
-\begin{frame}{From credences to desirability judgements}
-  The desirability judgements induced by a coherent credence function $\pi$ via its expectation $\E_{\pi}$, interpreted as unique
-  fair price, are \textbf{extremely structured}.
-  \begin{center}
-      \includegraphics[width=.7\textwidth]{desirability1.pdf}
-  \end{center}
-\end{frame}
+%\begin{frame}{From credences to desirability judgements}
+%  The desirability judgements induced by a coherent credence function $\pi$ via its expectation $\E_{\pi}$, interpreted as unique
+%  fair price, are \textbf{extremely structured}.
+%  \begin{center}
+%      \includegraphics[width=.7\textwidth]{desirability1.pdf}
+%  \end{center}
+%\end{frame}
 
 \begin{frame}{From credences to desirability judgements}
   Represent opinions via \alert{\textbf{sets of desirable gambles}} for more expressive power.
@@ -286,7 +288,7 @@
 \end{frame}
 
 \begin{frame}{From credences to desirability judgements}
-  For any probability function $\pi$, $D_{\pi} = \{X : p(X) > 0\}$ is the set of gambles an agent with credence function
+  For any probability function $\pi$, $D_{\pi} = \{X : \E_{\pi}(X) > 0\}$ is the set of gambles an agent with credence function
   $\pi$ finds desirable.
   
   We can express Total Trust in desirability terms.
@@ -301,7 +303,7 @@
 \end{frame}
 
 \begin{frame}{From GSP to INSERT NAME HERE measures of inaccuracy}
-  We can use [INSERT NAME HERE] to measure the inaccuracy of an arbitrary set of desirable gambles at a
+  We can use [INSERT NAME HERE] to measure the inaccuracy of an \textit{arbitrary set of desirable gambles} at a
   world.
   \begin{itemize}
   \item For every $X$ which you find desirable, you get a penalty if $X$ is not actually desirable.
@@ -309,23 +311,23 @@
   \end{itemize}
   \begin{equation}
       \label{KonekScoreDefAppendix}
-      S(\pi, w_i) = \int_{D_{w_i} \sim D_{\pi}} x_i d\mu - \int_{D_{\pi} \sim D_{w_i}} x_i d\mu 
+      S(D, w_i) = \int_{D_{w_i} \sim D} x_i d\mu - \int_{D \sim D_{w_i}} x_i d\mu 
     \end{equation}
 \end{frame}
 
-\begin{frame}{GSP vs INSERT NAME HERE}
-  \textbf{GSP}:
-  \begin{itemize}
-  \item \alert{\textbf{Structural Assumption}}: The single value $\E_{\pi}(X)$ determines the desirability of
-    \textit{all gambles} in form $(X - t)$ and $(t-X)$.
-  \item These judgements jointly determine the inaccuracy of the expectation value $\E_{\pi}(X)$.
-  \end{itemize}
-  \textbf{INSERT NAME HERE}
-  \begin{itemize}
-  \item \alert{\textbf{No structural assumptions}} on desirability judgements.
-  \item Each desirability judgement contributes \textit{directly and individually} to your total inaccuracy.
-  \end{itemize}
-\end{frame}
+%\begin{frame}{GSP vs INSERT NAME HERE}
+%  \textbf{GSP}:
+%  \begin{itemize}
+%  \item \alert{\textbf{Structural Assumption}}: The single value $\E_{\pi}(X)$ determines the desirability of
+%    \textit{all gambles} in form $(X - t)$ and $(t-X)$.
+%  \item These judgements jointly determine the inaccuracy of the expectation value $\E_{\pi}(X)$.
+%  \end{itemize}
+%  \textbf{INSERT NAME HERE}
+%  \begin{itemize}
+%  \item \alert{\textbf{No structural assumptions}} on desirability judgements.
+%  \item Each desirability judgement contributes \textit{directly and individually} to your total inaccuracy.
+%  \end{itemize}
+%\end{frame}
 
 
 \begin{frame}{A useful fact}
@@ -400,7 +402,7 @@
   \begin{block}{Theorem}
     \begin{enumerate}
       \item If $\pi$ does not Totally Trust $p$, then there are measurable sets of gambles $\Oset^+, \Oset^-$ such that
-        $\pi$ expects $D_p^*$ to be strictly more accurate than $D_p$ under \alert{\textbf{every}}
+        $\pi$ expects $D_p^* = (D_p \cup \Oset^+) \sim \Oset^-$ to be strictly more accurate than $D_p$ under \alert{\textbf{every}}
         INSERT NAME HERE measure of inaccuracy.
       \item If $\pi$ Totally Trusts $p$, then for any measurable sets of gambles $\Oset^+$ and $\Oset^-$, $\pi$ expects $D_p$
         to be at least as accurate as $D_p^*$ under \alert{\textbf{every}} INSERT NAME HERE measure of inaccuracy.
@@ -414,7 +416,8 @@
   \item Then there are (rigidly designated!) set of gambles $\Oset^+, \Oset^-$ such that you think you would be more accurate,
     under \textbf{\alert{every}} INSERT NAME HERE measure of inaccuracy, if you found gambles in $\Oset^+$ desirable and
     gambles in $\Oset^-$ not desirable at every possible world.
-  \item There is a rigidly designated way to change your judgements which you expect would make you more accurate.
+  \item There is a way to change your judgements which you expect would make you more accurate, no matter which measure of
+    accuracy you use!
   \end{itemize}
 \end{frame}
 
